@@ -1,26 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Color Palette: Warm Milk Foam, Pure Chocolate & Bay Mint */
+    --canvas-bg: #fbf9f5;
+    --surface-card: #ffffff;
+    --border-soft: #eae2d9;
+
+    /* Deep Chocolate Brown (#4e403b base) */
+    --color-cocoa: #4e403b;          /* True Chocolate Brown from user swatch */
+    --color-cocoa-dark: #372b27;     /* Deep Cocoa Rich */
+    --color-cocoa-muted: #7d6b63;    /* Soft Warm Cocoa */
+
+    /* Bay Mint (#bae5d6 base) */
+    --color-bay: #bae5d6;            /* True Bay Mint from user swatch */
+    --color-bay-deep: #059669;       /* Rich Deep Mint for high-contrast crisp text */
+    --color-bay-surface: #ebf7f3;    /* Soft Milk Glaze Mint surface */
+    --color-bay-border: #bce5d8;     /* Delicate Mint border */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fbf9f5;
+  color: #4e403b;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.012em;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, Cambria, serif;
+}
+
+/* Custom aesthetic scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2d9cd;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bae5d6;
 }
